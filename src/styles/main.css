@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Urbanist', sans-serif;
+}
+
+:root {
+  --bakerloo: #B36305;
+  --central: #E32017;
+  --circle: 	#FFD300;
+  --district: #00782A;
+  --dlr: 	#00A4A7;
+  --ham-city: #F3A9BB;
+  --jubilee: #A0A5A9;
+  --metropolitan: #9B0056;
+  --northern: #000;
+  --overground: #EE7C0E;
+  --piccadilly: #003688;
+  --tramlink: #84B817;
+  --victoria: #0098D4;
+  --waterloo-city: #95CDBA;
+
+  --tfl-blue: #1C3E95;
+
+  --good-service: green;
+  --minor-delays: yellow;
+  --severe-delays: red;
+
+  --accent-grey: #EEEEEE;
+  --bg-grey: #2d3039;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1C3E95;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2d3039, #1C3E95);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2d3039, #1C3E95); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+img {
+  height: 28px;
+  margin-bottom: 5px;;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.status-dot {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  margin-right: 20px;
+  animation: pulse 2s infinite;
+}
+
+.Good {
+  background-color: var(--good-service);
+}
+
+.Minor {
+  background-color: var(--minor-delays);
+}
+
+.Severe {
+  background-color: var(--severe-delays);
+}
+
+.Planned {
+  background-color: var(--severe-delays);
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+}
+
+.status-text {
+  background: none;
+}
+
+.line-container {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-left: 8px solid;
+}
+
+.line-container:nth-child(odd) {
+  background-color: var(--accent-grey);
+
+}
+.line-container:nth-child(even) {
+  background-color: white;
+}
+
+.line-container:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.line-container:last-child {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+#bakerloo {
+  border-color: var(--bakerloo)
+}
+
+#central {
+  border-color: var(--central);
+}
+
+#circle {
+  border-color: var(--circle);
+}
+
+#district {
+  border-color: var(--district);
+}
+
+#hammersmith-city {
+  border-color: var(--ham-city);
+}
+
+#jubilee {
+  border-color: var(--jubilee);
+}
+
+#metropolitan {
+  border-color: var(--metropolitan);
+}
+
+#northern {
+  border-color: var(--northern);
+}
+
+#piccadilly {
+  border-color: var(--piccadilly);
+}
+
+#victoria {
+  border-color: var(--victoria);
+}
+
+#waterloo-city {
+  border-color: var(--waterloo-city);
+}
+
+#refresh-timer {
+  color: white;
+  margin-top: 10px;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
